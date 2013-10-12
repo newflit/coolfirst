@@ -22,17 +22,48 @@
 		<meta name='robots' content='noindex,nofollow' />
 		<link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=Cabin%3A400%2C700%2C400italic%7CMerriweather%3A900%7CLora%3A400%2C700%2C400italic&#038;ver=1.0' media='all' />
 		
-		<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-		<link rel="stylesheet" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />
 
-		<?php echo HTML::style('css/font-awesome.css'); ?>
-		<?php echo HTML::style('css/style.css',array('id'=>'main-css')); ?>
-		<?php echo HTML::style('css/custom.css',array('id'=>'custom-css')); ?>
+		<?php 
+			echo HTML::style('css/bootstrap.min.css'); 
+			echo HTML::style('css/font-awesome.css');
+			echo HTML::style('css/style.css',array('id'=>'main-css'));
+			echo HTML::style('css/custom.css',array('id'=>'custom-css')); 
+		?>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js?ver=2.2.0'></script>
+
+		<?php echo HTML::script('js/modernizr.dev.js'); ?>
+		<?php echo HTML::script('js/jquery.easing.js'); ?>
+		<?php echo HTML::script('js/idangerous.swiper.js'); ?>
+		<?php echo HTML::script('js/jquery.mixitup.js'); ?>
+		<?php echo HTML::script('js/jquery.jplayer.js'); ?>
+		<?php echo HTML::script('js/jquery.flickr.js'); ?>
+		<?php echo HTML::script('js/jquery.instagram.js'); ?>
+		<?php echo HTML::script('js/jquery.twitter.js'); ?>
+		<?php echo HTML::script('js/jquery.timeago.js'); ?>
+
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<?php echo HTML::script('js/script.js'); ?>
+
+			<script>
+				var templateUrl = 'http://themes.digitalcookers.net/wp-content/themes/cotton';
+				!function(){
+					// configure legacy, retina, touch requirements @ conditionizr.com
+					conditionizr()
+				}()
+			</script>
+
+		<?php echo HTML::script('js/fluidvids.js'); ?>
+		<?php echo HTML::script('js/masonry.js'); ?>
+		<?php echo HTML::script('js/imagesloaded.js'); ?>
 
 	</head>
-<body>
 
-<!-- wrapper -->
+<body class="home custom-background">
+	
+		<!-- wrapper -->
 		<div id="page">
 			
 			<!-- START HEADER -->
@@ -42,12 +73,12 @@
 						<div id="intro" class="text-container">
 							<!-- logo -->
 							<div id="logo" class="logo">
-								<a href="http://themes.digitalcookers.net">
-																	<img src="http://themes.digitalcookers.net/wp-content/uploads/2013/09/logo.svg" alt="Logo" class="logo-img">
-																</a>
+								<a href="<?php echo URL::to('/'); ?>">
+									<img src="http://themes.digitalcookers.net/wp-content/uploads/2013/09/logo.svg" alt="Logo" class="logo-img">
+								</a>
 							</div>
 							<!-- /logo -->
-							<h1 id="caption">Wordpress Theme Awesomeness.</h1>
+							<h1 id="caption">Melbourne Best Cooling System.</h1>
 							<h2 id="sub-caption">Finally here!</h2>
 							<div id="explore"><a class="scroll"><i class="icon-angle-down icon-4x"></i></a></div>
 						</div>
@@ -62,7 +93,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							
-																	<div id="logo-lettering">
+									<div id="logo-lettering">
 										<a class="scroll header" href="#header"><img src="http://themes.digitalcookers.net/wp-content/uploads/2013/09/logo_lettering.svg" alt="Logo Lettering"/></a>
 									</div>
 															
@@ -72,14 +103,16 @@
 						</div>
 						<div class="col-md-8">
 							<nav id="top-navigation" role="navigation">
-								<ul class="list-inline"><li id="menu-item-1888" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1888"><a href="#team-2">Team</a></li>
-<li id="menu-item-1898" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1898"><a href="#studio">Studio</a></li>
-<li id="menu-item-1909" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1909"><a href="#services">Services</a></li>
-<li id="menu-item-1931" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1931"><a href="#works">Works</a></li>
-<li id="menu-item-1933" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1933"><a href="#social-feed">Social</a></li>
-<li id="menu-item-1951" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1951"><a href="#blog">Blog</a></li>
-<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-sections menu-item-1953"><a href="#contact">Contact</a></li>
-</ul>							</nav>
+								<ul class="list-inline">
+									<li class="active"><a href="#team-2">Team</a></li>
+									<li><a href="#studio">Studio</a></li>
+									<li><a href="#services">Services</a></li>
+									<li><a href="#works">Works</a></li>
+									<li><a href="#social-feed">Social</a></li>
+									<li><a href="#blog">Blog</a></li>
+									<li><a href="#contact">Contact</a></li>
+								</ul>							
+							</nav>
 						</div>
 					</div>
 				</div>
@@ -1113,38 +1146,14 @@ Somewhere</p>
 				
 			</footer>
 			<!-- /footer -->
-		
+			</div>
 		</div>
 		<!-- /wrapper -->
 
+		
+
 	<!-- js section start -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js?ver=2.2.0'></script>
-
-	<?php echo HTML::script('js/modernizr.dev.js'); ?>
-	<?php echo HTML::script('js/jquery.easing.js'); ?>
-	<?php echo HTML::script('js/idangerous.swiper.js'); ?>
-	<?php echo HTML::script('js/jquery.mixitup.js'); ?>
-	<?php echo HTML::script('js/jquery.jplayer.js'); ?>
-	<?php echo HTML::script('js/jquery.flickr.js'); ?>
-	<?php echo HTML::script('js/jquery.instagram.js'); ?>
-	<?php echo HTML::script('js/jquery.twitter.js'); ?>
-	<?php echo HTML::script('js/jquery.timeago.js'); ?>
-
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<?php echo HTML::script('js/script.js'); ?>
-
-		<script>
-			var templateUrl = 'http://themes.digitalcookers.net/wp-content/themes/cotton';
-			!function(){
-				// configure legacy, retina, touch requirements @ conditionizr.com
-				conditionizr()
-			}()
-		</script>
-
-	<?php echo HTML::script('js/fluidvids.js'); ?>
-	<?php echo HTML::script('js/masonry.js'); ?>
-	<?php echo HTML::script('js/imagesloaded.js'); ?>
+	
 
 </body>
 </html>

@@ -13,14 +13,9 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
-});
-
-Route::get('about',function(){
-
 	$data = array(
-		'title' => 'Web Title',
-		'description' => 'Website description here'
+		'title' => 'Cool First',
+		'description' => 'cooling system, air conditioning, Melbourne'
 	);
-	return View::make('page.about',$data);
+	return View::make('home',$data);
 });
